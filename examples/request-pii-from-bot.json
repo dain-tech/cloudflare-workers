@@ -1,0 +1,34 @@
+{
+	"originator": {
+		"@id": "mailTo:bot-originator-customer"
+	},
+	"beneficiary": {
+		"@id": "mailTo:your-beneficiary-customer"
+	},
+	"asset": "bip122:000000000019d6689c085ae165831e93/slip44:0",
+	"amount": "1",
+	"settlementId": "bip122:000000000019d6689c085ae165831e93:tx/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+	"agents": [
+		{
+			"@id": "did:pkh:bip122:000000000019d6689c085ae165831e93:3ZYEaUm8JsYB1CvhbFAa8K3zncxBkeeCW",
+			"for": "did:web:notabeneid-36ea1.sandbox.notabene.id:in",
+			"role": "SourceAddress"
+		},
+		{
+			"@id": "did:web:notabeneid-36ea1.sandbox.notabene.id:in",
+			"for": "mailTo:bot-originator-customer",
+			"role": "VASP"
+		},
+		{
+			"@id": "did:web:replace-with-your-vasp.example:test",
+			"for": "mailTo:your-beneficiary-customer",
+			"role": "VASP"
+		},
+		{
+			"@id": "did:pkh:bip122:000000000019d6689c085ae165831e93:1111111111111111111114oLvT2",
+			"for": "did:web:replace-with-your-vasp.example:test",
+			"role": "SettlementAddress"
+		}
+	],
+	"ref": "request-pii-from-bot-example-001"
+}

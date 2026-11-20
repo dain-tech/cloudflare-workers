@@ -1,0 +1,16 @@
+# Copy to .dev.vars for local development; keep actual values out of Git.
+# Only fill the credentials needed for the bot flows you exercise.
+# This file also supplies secret NAMES for reproducible Worker type generation.
+AUTH0_CLIENT_SECRET=
+ACCEPT_CLIENT_SECRET=
+REJECT_CLIENT_SECRET=
+REPLACE_CLIENT_SECRET=
+ADD_CLIENT_SECRET=
+BR_CLIENT_SECRET=
+CONFIRM_CLIENT_SECRET=
+BOT_REQUESTS_PII_CLIENT_SECRET=
+BOT_REQUESTS_ENCRYPTED_PII_CLIENT_SECRET=
+REQUEST_BOT_PII_CLIENT_SECRET=
+
+# Optional standalone decryption helper; not read by the active webhook route.
+PF_BOT_PRIVATE_JWK=

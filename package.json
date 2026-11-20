@@ -1,0 +1,22 @@
+{
+  "name": "robo-entities",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "check:worker-types": "wrangler types --env-file .dev.vars.example --check",
+    "generate:pf-key": "node scripts/generate-pf-pii-key.mjs",
+    "cf-typegen": "wrangler types --env-file .dev.vars.example"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.12.4",
+    "@types/node": "^25.5.2",
+    "typescript": "^5.5.2",
+    "vitest": "~3.2.0",
+    "wrangler": "4.101.0"
+  }
+}

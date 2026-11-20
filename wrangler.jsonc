@@ -1,0 +1,61 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "robo-entities-prod",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-04-09",
+	"observability": {
+		"enabled": true,
+		"redact_query_string": false,
+	},
+	"upload_source_maps": true,
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"vars": {
+		"NB_API_URL": "https://api.eu1.notabene.id",
+		"AUTH0_ISSUER": "https://auth.notabene.id",
+		"AUTH0_AUDIENCE": "https://api.eu1.notabene.id",
+		"AUTH0_CLIENT_ID": "X1MSXl6mdLaK0zNDGivM8YC2gmcslH4g",
+		"ACCEPT_CLIENT_ID": "PDqFdaYXalL0WgTDbtZ7yUdCTfKiKtnP",
+		"CONFIRM_CLIENT_ID": "k3mwgFF1NoMDX0IUFEMIriAxwolsqEym",
+		"BR_CLIENT_ID": "F0kGhbvmJ9qJgXpWiyiy8BGeinBWgscZ",
+		"ADD_CLIENT_ID": "28KxPSpVzoMS0eSJPoh5a7c2Ye23nMiE",
+		"REQUEST_BOT_PII_CLIENT_ID": "VgMGHWpFOxoJ1rGM9IGaHe5ZbActoYIr",
+		"BOT_REQUESTS_ENCRYPTED_PII_CLIENT_ID": "VwZppuBOj3Fs15dfzQr8X1KsnMf8mMSX",
+		"BOT_REQUESTS_PII_CLIENT_ID": "JOw2tzVUNNt8Ha38pjkVN2wt66PoUzh2",
+		"REJECT_CLIENT_ID": "N4L7rL7IYbFD1tEgDcQ7fDgWtOi8pLGn",
+		"REPLACE_CLIENT_ID": "RRdxUXSqvKL6POVusIGqsoCQyUPpyz9p"
+	},
+	/**
+	 * Smart Placement
+	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
+	 */
+	// "placement": {  "mode": "smart" }
+	/**
+	 * Bindings
+	 * Bindings allow your Worker to interact with resources on the Cloudflare Developer Platform, including
+	 * databases, object storage, AI inference, real-time communication and more.
+	 * https://developers.cloudflare.com/workers/runtime-apis/bindings/
+	 */
+	/**
+	 * Environment Variables
+	 * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
+	 * Note: Use secrets to store sensitive data.
+	 * https://developers.cloudflare.com/workers/configuration/secrets/
+	 */
+	// "vars": {  "MY_VARIABLE": "production_value" }
+	/**
+	 * Static Assets
+	 * https://developers.cloudflare.com/workers/static-assets/binding/
+	 */
+	// "assets": {  "directory": "./public/",  "binding": "ASSETS" }
+	/**
+	 * Service Bindings (communicate between multiple Workers)
+	 * https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
+	 */
+	// "services": [  {   "binding": "MY_SERVICE",   "service": "my-service"  } ]
+}
